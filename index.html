@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Ready Bootstrap Dashboard</title>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+	<link rel="stylesheet" href="assets/css/ready.css">
+
+	        <!-- The core Firebase JS SDK is always required and must be listed first -->
+			<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+
+			<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+			<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
+	
+			<!-- Add Firebase products that you want to use -->
+			<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>
+			<script>
+				const firebaseConfig = {
+				apiKey: "AIzaSyA5upRFyCScd4b02onirWNFRz6SVc3O0X8",
+				authDomain: "ideal-garden-5b5d0.firebaseapp.com",
+				databaseURL: "https://ideal-garden-5b5d0-default-rtdb.europe-west1.firebasedatabase.app",
+				projectId: "ideal-garden-5b5d0",
+				storageBucket: "ideal-garden-5b5d0.appspot.com",
+				messagingSenderId: "667083056381",
+				appId: "1:667083056381:web:10ae6d52ac4f3133e6ca94",
+				measurementId: "G-EZ4N4YNZXK"
+				};
+						
+				// Initialize Firebase
+				firebase.initializeApp(firebaseConfig);
+					firebase.analytics();
+				</script>
+
+				<style>
+					@media (min-width: 767px) {
+						.mlogo {
+						display: none;
+						}
+					}
+				</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<div class="logo-header">
+				<a href="index.html" class="logo">
+					Analytics
+				</a>
+				
+				<br><br>
+				<img src="assets/img/logo.png" alt="Img Profile" height="200px" width="200px" class="mx-auto d-none d-md-block">
+			</div>
+	
+			</div>
+	
+			<div class="main-panel">
+				<div class="content">
+					<div class="container-fluid">
+						<h4 class="page-title">Ideal Garden Analytics</h4>
+						<div class="row">
+							<div class="col-md-3">
+								<div class="card card-stats card-warning">
+									<div class="card-body ">
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center">
+													<i class="la la-tint"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">Humidity</p>
+													<h4 id="tv_humidity" class="card-title">...</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card card-stats card-success">
+									<div class="card-body ">
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center">
+													<i class="la la-eyedropper"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">Temerature</p>
+													<h4 id="tv_temprature" class="card-title">...</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card card-stats card-danger">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center">
+													<i class="la la-leaf"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">La pelouse</p>
+													<h4 id="tv_pelouse" class="card-title">...</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card card-stats card-primary">
+									<div class="card-body ">
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center">
+													<i class="la la-lightbulb-o"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">Lampadaires 1</p>
+													<h4 id="tv_lamps1" class="card-title">...</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-3">
+								<div class="card card-stats card-danger">
+									<div class="card-body ">
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center">
+													<i class="la la-lightbulb-o"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">Lampadaires 2</p>
+													<h4 id="tv_lamps2" class="card-title">...</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card card-stats card-primary">
+									<div class="card-body ">
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center">
+													<i class="la la-folder-o"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">La porte</p>
+													<h4 id="tv_porte" class="card-title">...</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<div class="card card-stats card-info">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-5">
+												<div class="icon-big text-center">
+													<i class="la la-trash"></i>
+												</div>
+											</div>
+											<div class="col-7 d-flex align-items-center">
+												<div class="numbers">
+													<p class="card-category">La poubelle</p>
+													<h4 id="tv_poubelle" class="card-title">...</h4>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+				
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+</body>
+<script>
+  function getAnalytics()
+            {
+                console.log("UPDATED");
+                var mRef = firebase.database().ref('data');
+
+                    mRef.once('value', function(snapshot) {
+                        var childData = snapshot.val();
+                        var isManually = childData.isManually;
+						var isNight = childData.isNight;
+						var isWaterON = childData.isWaterON;
+						var isDrySoil = childData.isDrySoil;
+						var isChairsNotEmpty = childData.isChairsNotEmpty;
+						var isTrashFull = childData.isTrashFull;
+						var isDoorOpen = childData.isDoorOpen;
+						var isLedOneLighting = childData.isLedOneLighting;
+						var isLedTwoLighting = childData.isLedTwoLighting;
+						var Temperature = childData.Temperature;
+						var Humidity = childData.Humidity;
+	
+							document.getElementById("tv_humidity").innerHTML = Humidity + " %";
+							document.getElementById("tv_temprature").innerHTML = Temperature + " C&deg;";
+
+						//SOIL
+						if(isDrySoil){
+							document.getElementById("tv_pelouse").innerHTML = "S&eacuteche";
+						}else{
+							document.getElementById("tv_pelouse").innerHTML = "Humide";
+						}
+						//LAMP1
+						if(isLedOneLighting){
+							document.getElementById("tv_lamps1").innerHTML = "Allum&eacute";
+						}else{
+							document.getElementById("tv_lamps1").innerHTML = "Eteint";
+						}
+						//LAMP2
+						if(isLedTwoLighting){
+							document.getElementById("tv_lamps2").innerHTML = "Allum&eacute";
+						}else{
+							document.getElementById("tv_lamps2").innerHTML = "&Eacuteteint";
+						}
+
+						//DOOR
+						if(isDoorOpen){
+							document.getElementById("tv_porte").innerHTML = "Ouverte";
+						}else{
+							document.getElementById("tv_porte").innerHTML = "Ferm&eacutee";
+						}
+
+						//TRASH
+						if(isTrashFull){
+							document.getElementById("tv_poubelle").innerHTML = "Pleine";
+						}else{
+							document.getElementById("tv_poubelle").innerHTML = "Vide";
+						}
+
+
+						//CALL EVERY 2s
+						timer = setInterval(function() {
+							getAnalytics();
+                	}, 2000);
+
+                });
+
+
+            }
+			//FIRST CALL
+			getAnalytics();
+	console.log("test");
+</script>
+
+<script src="assets/js/core/jquery.3.2.1.min.js"></script>
+<script src="assets/js/core/bootstrap.min.js"></script>
+
+
+
+</html>
